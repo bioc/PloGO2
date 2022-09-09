@@ -32,7 +32,7 @@ to = c(from[-1], 1+length(Uniprot)) -1
 unip.list = list()
 for (jj in seq_along(from)) {
    # unip.list[[jj]] = try( getUniprotBatch(values=Uniprot[from[jj]:to[jj]], attributes=c("id", "protein+names", "go")) )
-   unip.list[[jj]] = try( getUniprotBatch(values=Uniprot[from[jj]:to[jj]], attributes=c("id", "go-id")) )
+   unip.list[[jj]] = try( getUniprotBatch(values=Uniprot[from[jj]:to[jj]], attributes=c("accession", "go_id")) )
 } 
 
 for (jj in seq_along(from)) {
